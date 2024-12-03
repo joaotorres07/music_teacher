@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Inclui padding e border dentro da largura total */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Organiza os elementos na vertical */
+    justify-content: center;  /* Centraliza a div verticalmente */
+    align-items: center;      /* Centraliza os elementos horizontalmente */
+    background-image: url('msc.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área do fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed;
+}
+
+/* Título principal acima da div */
+h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    color: white;
+    -webkit-text-stroke: 2px blue;
+}
+
+/* Estilos para o container */
+.container {
+    text-align: center; /* Centraliza o texto dentro da div */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%; /* Faz com que a div ocupe 100% da largura disponível */
+    max-width: 600px; /* Define uma largura máxima */
+    box-sizing: border-box; /* Garante que padding e bordas estejam dentro da largura */
+    background-image: url('msc2.jpg'); /* Caminho para a imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área do fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed;
+}
+
+/* Estilo para os inputs e textarea */
+.container input,
+.container button,
+.container textarea {
+    width: 100%; /* Faz com que o campo ocupe toda a largura da div */
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+/* Estilo para o botão */
+.container button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para o textarea */
+.container textarea {
+    height: 100px;
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+    background-color: #f9f9f9;
+}
+
+/* Estilo para a animação de movimento */
+@keyframes moveText {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+.move-title {
+    font-size: 36px;
+    color: white;
+    -webkit-text-stroke: 2px blue;
+    animation: moveText 3s ease-in-out infinite;
+}
